@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Zapatos - Catálogo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/idex.css">
 </head>
 
@@ -41,66 +39,228 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
+                <div class="carousel-item active">
                     <img src="img/1.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Zapatos a precios bajos</h5>
-                        <p>Gran variedad de precios a eleccion.</p>
+                    <div class="carousel-caption ">
+                        <h5>ZAPATERIA HOMBRE SUPER VIRIL</h5>
+                        <p>A CADA PASO... UN HOMBRE LLENO DE CONFIANZA</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/2.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>ZAPATERIA HOMBRE SUPER VIRIL</h5>
-                        <p>Cada paso un hombre lleno de confianza.</p>
+                    <img src="img/2y2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption ">
+                        <h5>¡DEJA TU HUELLA!</h5>
+                        <p>DESCUBRE LA NUEVA COLECCION: TENDENCIAS QUE PISAN FUERTE</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/3.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Modelos a tu gusto</h5>
-                        <p>Aprovecha las nuevas ofertas por navidad.</p>
+                    <img src="img/6.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption ">
+                        <h5>¡FELIZ NAVIDAD!</h5>
+                        <p>APROVECHE LAS NUEVAS OFERTAS TODO DICIEMBRE</p>
                     </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
             </button>
         </div>
 
-        <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
-              <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+        <section class="tarjeta row align-items-md-stretch mx-3">
+            <article class="col-md-6">
+                <div class="h-100 p-5 text-bg-dark rounded-3 shadow-lg position-relative">
+                    <h2 class="mb-3">ZAPATILLAS EN OFERTA A 75%</h2>
+                    <p class="mb-4">
+                        Temporada de aprovechar estos descuentos en tiempo limitado.
+                    </p>
+                    <img src="img/ZAPATILLAINDX.png" alt="Zapatillas en oferta">
+                </div>
+            </article>
+            <article class="col-md-6">
+                <div
+                    class="h-100 p-5 bg-body-tertiary border rounded-3 shadow-lg position-relative d-flex flex-column justify-content-center">
+                    <h2 class="mb-3">NUEVOS ZAPATOS!! MODELOS MODERNOS Y A LA MODA</h2>
+                    <p class="mb-4">
+                        Nuevos modelos de zapatos de cuero llegan a la tienda, aproveche y modernice su estilo con
+                        nuevos calzados.
+                    </p>
+                    <img src="img/ZAPATOSINDEX.png" alt="Zapatos modernos">
+                </div>
+            </article>
+        </section>
+
+        <section class="container my-5">
+            <article class="row featurette align-items-center">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                        ARMA UN ESTILO ELEGANTE.
+                    </h2>
+                    <p class="lead">
+                        Tus pies dicen mucho de ti. Dale el mejor estilo con nuestra nueva colección....
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="img/ZAPATOTARJETA.jpg" alt="Placeholder" class="featurette-image img-fluid mx-auto"
+                        width="500" height="500">
+                </div>
+            </article>
+
+            <hr class="featurette-divider my-5">
+
+            <article class="row featurette align-items-center">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                        RENUEVA TU LOOK, UN PASO A LA VEZ
+                    </h2>
+                    <p class="lead">
+                        Desde clásicos hasta modernos, tenemos lo que necesitas. Aproveche ahora!!!
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="img/ZAPATOTARJETA2.jpg" alt="Placeholder" class="featurette-image img-fluid mx-auto"
+                        width="500" height="500">
+                </div>
+            </article>
+        </section>
+        <!-- TARJETAS -->
+        <div class="tar row align-items-md-stretch">
+            <div class="container mt-5">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-shop fs-1 text-primary"></i>
+                                <h5 class="card-title mt-3">RECOJO EN TIENDA FISICA</h5>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Ver
+                                    más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-truck fs-1 text-success"></i>
+                                <h5 class="card-title mt-3">DELIVERY PROGRAMADO</h5>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Ver
+                                    más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-credit-card fs-1 text-danger"></i>
+                                <h5 class="card-title mt-3">MÉTODOS DE PAGO Y PLAZOS</h5>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">Ver
+                                    más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-globe fs-1 text-warning"></i>
+                                <h5 class="card-title mt-3">ENVÍOS A TODO EL PERÚ</h5>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">Ver
+                                    más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-5">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+
+            <!-- VENTANAS EMERGENTES -->
+            <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <i class="bi bi-shop fs-1 text-primary col-md-2 "></i>
+                            <h5 class="modal-title">RECOGIDA EN TIENDA</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Recoge tus pedidos directamente en nuestras tiendas seleccionadas.</p>
+                            <ul>
+                                <li>Conveniente para clientes locales.</li>
+                                <li>Sin costos adicionales.</li>
+                                <li>Tiendas a nivel nacional.</li>
+                                <li>Programe la fecha de entrega.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      
-          <hr class="featurette-divider">
-      
-          <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
-              <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+
+            <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <i class="bi bi-truck fs-1 text-success col-md-2"></i>
+                            <h5 class="modal-title">DELIVERY PROGRAMADO</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Programa la entrega de tus pedidos en el horario y el lugar que prefieras.</p>
+                            <ul>
+                                <li>Entrega garantizada a tiempo.</li>
+                                <li>Disponible en zonas seleccionadas.</li>
+                                <li>Entrega a la puerta de su casa.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-5 order-md-1">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+
+            <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <i class="bi bi-credit-card fs-1 text-danger col-md-2"></i>
+                            <h5 class="modal-title">METODOS DE PAGO</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Incluye distintas formas de pago, seleccione la que mas le convenga.</p>
+                            <ul>
+                                <li>Incluye solo a nivel nacional.</li>
+                                <li>En Bancos o Agentes.</li>
+                                <li>Disponible para billeteras digitales (Yape, Plin u otros).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <i class="bi bi-globe fs-1 text-warning col-md-2"></i>
+                            <h5 class="modal-title">ENVIOS A TODO EL PERÚ</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Gracias a nuestro servicio de mensajeria a nivel nacional.</p>
+                            <ul>
+                                <li>Entrega en 3 semanas.</li>
+                                <li>Segun la direccion indicada.</li>
+                                <li>Reembolso por si la fecha de entrega demora mas de 1 mes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="text-white text-center py-5 ">
         <p>&copy; 2024 Tienda de Zapatos. Todos los derechos reservados.</p>
-        <div class="footer-info d-flex justify-content-center gap-4 align-items-center mt-1">
+        <div class="footer-info d-flex justify-content-center align-items-center mt-1">
             <div class="footer-item">
                 <i class="bi bi-telephone-fill me-2"></i>
                 <span>Celular: 989898999</span>
@@ -125,17 +285,15 @@
             const nextButton = carousel.querySelector(".carousel-control-next");
 
             let currentSlide = 0;
-            let autoPlayInterval = 5000; // Intervalo en milisegundos para cambiar de imagen automáticamente
+            let autoPlayInterval = 5000;
             let autoPlay;
 
             const showSlide = (index) => {
-                // Reset todas las diapositivas e indicadores
                 slides.forEach((slide, i) => {
                     slide.classList.remove("active");
                     indicators[i].classList.remove("active");
                 });
 
-                // Activar la diapositiva e indicador actual
                 slides[index].classList.add("active");
                 indicators[index].classList.add("active");
 
@@ -160,7 +318,6 @@
                 clearInterval(autoPlay);
             };
 
-            // Event listeners para botones
             nextButton.addEventListener("click", () => {
                 stopAutoPlay();
                 nextSlide();
@@ -173,7 +330,6 @@
                 startAutoPlay();
             });
 
-            // Event listeners para indicadores
             indicators.forEach((indicator, index) => {
                 indicator.addEventListener("click", () => {
                     stopAutoPlay();
@@ -182,7 +338,6 @@
                 });
             });
 
-            // Iniciar el carrusel automáticamente
             startAutoPlay();
         });
 

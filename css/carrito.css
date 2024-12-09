@@ -1,0 +1,118 @@
+main.carrito-container {
+    color: #000000;
+}
+
+main h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+main h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+main .productos-carrito .producto {
+    background-color: #ffffff;
+    border: 1px solid #363636;
+    border-radius: 8px;
+    display: flex;
+    padding: 16px;
+    gap: 16px;
+}
+
+main .producto-img {
+    width: 120px;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+main .producto-detalles h2 {
+    margin-bottom: 8px;
+}
+
+main .producto-detalles p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+main .producto-detalles .disponibilidad p {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+main .producto-precio {
+    text-align: right;
+}
+
+main .producto-precio .precio-actual {
+    font-size: 1.1rem;
+    color: #e63946;
+    font-weight: bold;
+}
+
+main .producto-precio .btn-eliminar {
+    background: transparent;
+    border: none;
+    color: #e63946;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+main .producto-precio .btn-eliminar:hover {
+    color: #000000;
+}
+
+main .resumen-pedido {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 1em;
+}
+
+main .resumen-pedido h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+main .resumen-pedido p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+main .resumen-pedido .totales p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+main .resumen-pedido .totales p span {
+    font-weight: bold;
+}
+
+main .resumen-pedido .total {
+    color: #e63946;
+}
+
+main .resumen-pedido .btn-pagar {
+    background-color: #f0ba74;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main .resumen-pedido .btn-pagar:hover {
+    background-color: #f8ab37;
+}

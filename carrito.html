@@ -1,54 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Tienda de Zapatos - Catálogo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/carrito.css">
 </head>
+
 <body>
-    <header class="bg-dark text-white text-center py-3">
-        <h1>Carrito de Compras</h1>
+    <header class="text-white text-center py-12">
+        <div class="header-content">
+            <img src="img/giglogo.png" class="header-logo" alt="Logo de la tienda">
+            <h1 class="logo">ZAPATERIA: HOMBRE SUPER VIRIL</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="carrito.html">CARRITO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container my-5">
-        <div class="table-responsive">
-            <table class="table table-striped table-hover">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Producto</th>
-                        <th>Talla</th>
-                        <th>Cantidad</th>
-                        <th>Precio</th>
-                        <th>Subtotal</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody id="cart-items">
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="4" class="text-end"><strong>Total:</strong></td>
-                        <td id="cart-total" class="fw-bold">S/ 0.00</td>
-                        <td></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-
-        <div class="d-flex justify-content-between mt-4">
-            <button id="clear-cart" class="btn btn-danger">Vaciar Carrito</button>
-            <button id="checkout" class="btn btn-success">Proceder al Pago</button>
+    <main class="container mt-4 carrito-container">
+        <div class="row">
+            <section class="col-md-8 productos-carrito">
+                <h1 class="mb-4">Carrito de compras</h1>
+                <div class="producto d-flex align-items-start p-3 mb-3 border rounded">
+                    <img src="img/zapato13.webp" alt="Producto" class="producto-img img-fluid rounded me-3" style="width: 120px; height: auto;">
+                    <div class="producto-detalles flex-grow-1">
+                        <h2 class="fs-5">Producto</h2>
+                        <p class="text-muted mb-2">Combon Robot 250 II COMBO-5</p>
+                        <p class="text-muted mb-2">Cantidad: </p>
+                        <div class="disponibilidad">
+                            <p class="mb-1"><i class="bi bi-truck text-success"></i> Disponible envío a domicilio.</p>
+                            <p><i class="bi bi-shop text-primary"></i> Disponible retiro en tienda.</p>
+                        </div>
+                    </div>
+                    <div class="producto-precio text-end">
+                        <p class="precio-actual fw-bold fs-5 text-danger">S/ 189.00</p>
+                        <button class="btn btn-outline-danger btn-sm btn-eliminar" title="Eliminar producto">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+    
+            <aside class="col-md-4 resumen-pedido p-9 border rounded">
+                <h2 class="fs-4 mb-3">Resumen de pedido</h2>
+                <p class="mb-3">2 Productos</p>
+                <div class="totales mb-4">
+                    <p class="d-flex justify-content-between">
+                        <span>Subtotal:</span>
+                        <span>S/ 378.00</span>
+                    </p>
+                    <p class="d-flex justify-content-between fw-bold">
+                        <span>Total Pedido:</span>
+                        <span class="total text-danger">S/ 378.00</span>
+                    </p>
+                </div>
+                <button class="btn btn-primary w-100 mb-2 btn-pagar">Siguiente <i class="bi bi-arrow-right"></i></button>
+                <a href="productos.html" class="añadir-productos text-center d-block text-decoration-none text-secondary mb-2">
+                    <i class="bi bi-cart"></i> Añadir más productos
+                </a>
+                
+            </aside>
         </div>
     </main>
+    
 
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="text-white text-center py-5 ">
         <p>&copy; 2024 Tienda de Zapatos. Todos los derechos reservados.</p>
+        <div class="footer-info d-flex justify-content-center align-items-center mt-1">
+            <div class="footer-item">
+                <i class="bi bi-telephone-fill me-2"></i>
+                <span>Celular: 989898999</span>
+            </div>
+            <div class="footer-item">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                <span>Ubicación: Av. Los Hombres Musculosos</span>
+            </div>
+            <div class="footer-item">
+                <i class="bi bi-envelope-fill me-2"></i>
+                <span>Gmail: MiguelAngel@gmail.com</span>
+            </div>
+        </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="scripts.js"></script>
 </body>
 </html>
-
