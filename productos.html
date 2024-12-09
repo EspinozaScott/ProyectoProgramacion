@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Zapatos - Catálogo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="text-white text-center py-12">
+        <div class="header-content">
+            <img src="img/giglogo.png" class="header-logo" alt="Logo de la tienda">
+            <h1 class="logo">ZAPATERIA: HOMBRE SUPER VIRIL</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="carrito.html">CARRITO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3">
+                <input type="text" id="search-input" class="form-control" placeholder="Buscar productos..."
+                    oninput="filterProducts()">
+            </div>
+        </div>
+        <div class="row" id="product-list"></div>
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center" id="pagination"></ul>
+        </nav>
+    </main>
+
+    <footer class="text-white text-center py-5 ">
+        <p>&copy; 2024 Tienda de Zapatos. Todos los derechos reservados.</p>
+        <div class="footer-info d-flex justify-content-center gap-4 align-items-center mt-1">
+            <div class="footer-item">
+                <i class="bi bi-telephone-fill me-2"></i>
+                <span>Celular: 989898999</span>
+            </div>
+            <div class="footer-item">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                <span>Ubicación: Av. Los Hombres Musculosos</span>
+            </div>
+            <div class="footer-item">
+                <i class="bi bi-envelope-fill me-2"></i>
+                <span>Gmail: MiguelAngel@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const products = [
+            { id: 1, name: "Zapato Elegante Negro", price: "S/ 250", image: "img/imge.webp" },
+            { id: 2, name: "Zapato de Cuero Negro", price: "S/ 180", image: "img/zapato2.jpg" },
+            { id: 4, name: "Zapato Deportivo Negro", price: "S/ 190", image: "img/zapato3.jpg" },
+            { id: 5, name: "Zapatilla Blanco con Azul", price: "S/ 300", image: "img/zapato4.jpg" },
+            { id: 6, name: "Zapatilla Elegante Blanco y Azul", price: "S/ 220", image: "img/zapato5.webp" },
+            { id: 7, name: "Zapatilla Comoda Casual", price: "S/ 170", image: "img/zapato6.webp" },
+            { id: 8, name: "Zapatilla de Cuero Marron", price: "S/ 230", image: "img/zapato7.jpg" },
+            { id: 9, name: "Zapato Tipo Botin para el Frio", price: "S/ 260", image: "img/zapato8.webp" },
+            { id: 10, name: "Zapato de Cuero Negro", price: "S/ 350", image: "img/zapato9.webp" },
+            { id: 11, name: "Zapatilla de Cuero Negro", price: "S/ 1010", image: "img/zapato10.jpg" },
+            { id: 12, name: "Zapatilla de Cuero Negro Casual", price: "S/ 580", image: "img/zapato11.webp" },
+            { id: 13, name: "Zapatilla Negro Casual", price: "S/ 610", image: "img/zapato12.jpg" },
+            { id: 14, name: "Zapatilla Cuero Negro y Dorado", price: "S/ 280", image: "img/zapato13.webp" },
+            { id: 15, name: "Zapato Elegante Marron", price: "S/ 870", image: "img/zapato14.webp" },
+            { id: 16, name: "Zapato Negro Charol", price: "S/ 200", image: "img/zapato15.avif" },
+            { id: 17, name: "Zapato Zapato Blanco Elegante", price: "S/ 1120", image: "img/zapato16.avif" },
+            { id: 18, name: "Zapato Zapato Charol Blanco", price: "S/ 588", image: "img/zapato17.webp" },
+            { id: 19, name: "Zapato Deportivo Casual Blanco", price: "S/ 298", image: "img/zapato18.jpg" },
+            { id: 20, name: "Zapatilla Azul", price: "S/ 210", image: "img/zapato19.jpg" },
+            { id: 21, name: "Zapatilla Deportivo Rojo", price: "S/ 488", image: "img/zapato20.webp" },
+            { id: 22, name: "Zapatilla Casual Gris", price: "S/ 800", image: "img/zapato21.jpg" },
+            { id: 23, name: "Zapatilla Deportivo Blanco", price: "S/ 1000", image: "img/zapato22.jpg" },
+            { id: 24, name: "Zapato Deportivo Negro", price: "S/ 700", image: "img/zapato23.webp" },
+            { id: 25, name: "Zapato Deportivo Rojo", price: "S/ 2333", image: "img/zapato24.webp" },
+            { id: 26, name: "Zapato para Frio", price: "S/ 469", image: "img/zapato25.jpg" },
+            { id: 27, name: "Sandalia Verde", price: "S/ 900", image: "img/zapato26.jpg" },
+            { id: 28, name: "Crods Rojo", price: "S/ 500", image: "img/zapato27.avif" },
+            { id: 29, name: "Crods Azul", price: "S/ 90", image: "img/zapato28.jpg" },
+            { id: 30, name: "Sandalia Negro", price: "S/ 99", image: "img/zapato29.webp" },
+            { id: 31, name: "Sandalia Negro 2", price: "S/ 105", image: "img/zapato30.jpg" },
+            { id: 32, name: "Zapato Botas de Cuero Negro", price: "S/ 180", image: "img/zapato31.jpg" },
+            { id: 32, name: "Zapato Botas de Cuero Marron", price: "S/ 100", image: "img/zapato32.webp" }
+        ];
+
+        const itemsPerPage = 8;
+        let currentPage = 1;
+        let filteredProducts = products; // Array para manejar los productos filtrados
+
+        function renderProducts(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = page * itemsPerPage;
+            const currentProducts = filteredProducts.slice(start, end);
+
+            const productContainer = document.getElementById("product-list");
+            productContainer.innerHTML = "";
+
+            if (currentProducts.length === 0) {
+                productContainer.innerHTML = `
+            <div class="col-12 text-center">
+                <p>No se encontraron productos.</p>
+            </div>
+        `;
+                return;
+            }
+
+            currentProducts.forEach(product => {
+                const productCard = `
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.name}</h5>
+                        <p class="card-text">Precio: ${product.price}</p>
+                        <button class="btn">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        `;
+                productContainer.innerHTML += productCard;
+            });
+        }
+
+        function renderPagination() {
+            const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+            const paginationContainer = document.getElementById("pagination");
+            paginationContainer.innerHTML = "";
+
+            if (totalPages === 0) return;
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageItem = `
+            <li class="page-item ${i === currentPage ? "active" : ""}">
+                <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+            </li>
+        `;
+                paginationContainer.innerHTML += pageItem;
+            }
+
+            // Botón "Siguiente"
+            if (currentPage < totalPages) {
+                paginationContainer.innerHTML += `
+            <li class="page-item">
+                <a class="page-link" href="#" onclick="changePage(${currentPage + 1})">Siguiente</a>
+            </li>
+        `;
+            }
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            renderProducts(page);
+            renderPagination();
+        }
+
+        function filterProducts() {
+            const query = document.getElementById("search-input").value.toLowerCase();
+            filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(query)
+            );
+            currentPage = 1; // Reinicia a la primera página tras filtrar
+            renderProducts(currentPage);
+            renderPagination();
+        }
+
+        // Inicializa con todos los productos visibles
+        renderProducts(currentPage);
+        renderPagination();
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++
+        
+    </script>
+</body>
+
+</html>

@@ -1,28 +1,190 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+    background-color: #ffffff;
 }
 
 header, footer {
-    background-color: #343a40;
+    background-color: #000000;
 }
 
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 1px;
+    top: 0;
+    z-index: 1000;
+    height: 18em;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-logo {
+    width: 155px;
+    height: auto;
+}
+
+header .logo {
+    font-size: 2.9rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+nav .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    margin: 0 10px;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+nav .menu li a:hover {
+    color: #0f0f2d;
+    background-color: #f3d8a6;
+}
+
+/* MEDIDAS */
+@media (max-width: 768px) {
+    nav .menu {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav .menu li {
+        margin: 5px 3px 4em;
+    }
+
+    .header-logo {
+        width: 150px;
+        height: auto;
+    }
+
+    header {
+        align-items: center;
+        padding: 30px 30px;
+        background-color: #000000;
+        z-index: 1000;
+        height: 17em;
+    }
+
+    header .logo {
+        font-size: 1.9rem;
+        color: #ffffff;
+        margin: 0;
+    }
+}
+
+@media (max-width: 988px) and (min-width: 768px ) {
+    nav .menu {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav .menu li {
+        margin: 5px 0;
+    }
+
+    .header-logo {
+        width: 165px;
+        height: auto;
+    }
+
+    header {
+        align-items: center;
+        padding: 30px 30px;
+        background-color: #000000;
+        position: sticky;
+        z-index: 1000;
+        height: 19em;
+    }
+}
+
+/* PRODUCTOS */
 .card {
-    border: none;
     transition: transform 0.2s;
 }
 
 .card:hover {
     transform: scale(1.05);
+    background-color: #fff6e5;
 }
 
+.card .btn {
+    background-color: #f3d8a6;
+    border-color: #f3d8a6;
+    color: #000; /* Opcional: para texto visible */
+}
+
+.card-img-top {
+    height: 200px; /* Ajusta según el diseño deseado */
+    object-fit: cover; /* Mantener proporciones de las imágenes */
+}
+
+.card .btn:hover {
+    background-color: #e0c18a; /* Un tono más oscuro al pasar el cursor */
+    border-color: #e0c18a;
+}
+
+/* PAGINACION */
+.pagination .page-link {
+    color: black; /* Color de texto de los números de paginación */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: black; /* Color de fondo para la página activa */
+    border-color: black; /* Color del borde para la página activa */
+    color: white; /* Color del texto para la página activa */
+}
+
+/* FOOTER */
+.footer-info .footer-item {
+    display: flex;
+    align-items: center;
+    color: white; /* Color de texto */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+.footer-info .footer-item i {
+    color: #f3d8a6; /* Color de los íconos */
+    font-size: 22px; /* Tamaño de los íconos */
+}
+
+/* CODIGO USADO PA OTRO LADOOOOUUUU */
+
 .btn-add-to-cart {
-    background-color: #007bff;
+    background-color: #000000;
     border: none;
 }
 
 .btn-add-to-cart:hover {
-    background-color: #0056b3;
+    background-color: #050a0f;
 }
 
 table th, table td {
@@ -31,18 +193,18 @@ table th, table td {
 }
 
 #cart-total {
-    color: #007bff;
+    color: #000000;
     font-size: 1.2rem;
 }
 
 
 input:focus {
     outline: none;
-    border: 2px solid #007bff;
+    border: 2px solid #000000;
 }
 
 button[type="submit"] {
-    background-color: #007bff;
+    background-color: #000000;
     color: #fff;
     font-size: 1.1rem;
 }
